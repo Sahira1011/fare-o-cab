@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/9602f37a92.js" crossorigin="anonymous"></script>
+</head>
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}">
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?  mily=Poppins&display=swap" rel="stylesheet" />
+
+<body>
+  <div class="container">
+    <div class="main-container-1">
+      <div class="cont-1">
+        <img src="{{ url_for('static', filename='img/icon2.png') }}" class="icon-bar" alt="icon" />
+      </div>
+      <div class="cont-2">
+        <div class="min-heading sub-container">Home</div>
+        <div class="min-heading sub-container">Popular outstation routes</div>
+        <div class="min-heading sub-container">About menu</div>
+        <div class="min-heading sub-container">Offers</div>
+        <div class="min-heading sub-container">Partner with us</div>
+        <div class="min-heading"></div>
+      </div>
+    </div>
+    <div class="side-container sub-container">ENQUIRE</div>
+    <div class="main-container-2">
+      <div class="form-container">
+        <div class="main-head">
+          <div class="sub-head">
+            <i class="fa-solid fa-taxi fa-lg"></i>
+            <p>Ola</p>
+          </div>
+          <div class="sub-head">
+            <i class="fa-brands fa-uber fa-lg"></i>
+            <p>Uber</p>
+          </div>
+          <div class="sub-head">
+            <i class="fa-solid fa-circle-question fa-lg"></i>
+            <p>Meru</p>
+          </div>
+          <div class="sub-head">
+            <i class="fa-solid fa-circle-question fa-lg"></i>
+            <p>Lyft</p>
+          </div>
+        </div>
+        <h2>Calculate now</h2>
+        <br />
+
+        <div class="form-div">
+          <input type="text" id="pickup_loc" class="input-bar" name="pickup_loc" size="30"
+            placeholder="Select pickup location" required />
+
+          <input type="text" id="destination" class="input-bar" name="destination" size="30"
+            placeholder="Enter destination" required />
+
+          <select class="select-category" onchange="setCategory(this.value)">
+            <option value="0">Select category :</option>
+            <option value="Micro">Micro</option>
+            <option value="Mini">Mini</option>
+            <option value="Prime" selected>Prime</option>
+            <option value="Prime Play">Prime Play</option>
+            <option value="Sedan">Sedan</option>
+            <option value="Play">Play</option>
+            <option value="Prime Rentals">Prime Rentals</option>
+            <option value="Prime Play Rentals">Prime Play Rentals</option>
+            <option value="Mini Rentals">Mini Rentals</option>
+            <option value="Lux">Lux</option>
+            <option value="SUV Rentals">SUV Rentals</option>
+          </select>
+
+          <div class="fareMore">
+            <p>Estimated Fare - </p>
+            <div class="subFareMore">
+              &#x20B9;<a href="#result" class="fare">0</a>
+
+            </div>
+          </div>
+
+          <button id="calculate" value="Calculate Ride Now" onclick="submitHandle()">Calculate Fare</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="right-container sub-container">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos,
+    dolore.
+    <br />
+    Lorem ipsum dolor sit.
+  </div>
+
+
+  <div class="result-container">
+
+    <!-- <div class="left-section">
+
+      <div class="map"></div>
+      <div class="pickup"></div>
+      <div class="drop"></div>
+      <div class="fare"></div>
+      <div class="traffic"></div>
+      <div class="distance"></div>
+    </div>
+    <div class="right-section"></div> -->
+
+    <div class="sec1 sec">
+      <div class="distance subsec">
+        0 KMs
+      </div>
+      <div class="duration subsec">
+        0 minutes
+      </div>
+      <div class="traffic subsec">
+        None
+      </div>
+    </div>
+
+    <div class="sec2 sec">
+      <div class="toll subsec">
+        0 Ruppes
+      </div>
+      <div class="category subsec">
+        Prime
+      </div>
+      <div class="price subsec">
+        0 Ruppes
+      </div>
+    </div>
+
+    <div class="sec">
+      <p>Directions - </p>
+    </div>
+
+    <div class="sec3 sec" id="result">
+
+    </div> -->
+  </div>
+
+
+
+  <script src="{{url_for('static', filename='js/script.js')}}"></script>
+</body>
+
+</html>
